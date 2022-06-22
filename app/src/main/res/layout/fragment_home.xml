@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Categories"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_apparel"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_apparel"
+        app:layout_constraintEnd_toStartOf="@+id/icon_beauty"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:id="@+id/text_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Categories"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_apparel"
+        app:layout_constraintStart_toStartOf="@+id/icon_apparel"
+        app:layout_constraintTop_toBottomOf="@+id/icon_apparel" />
+
+    <ImageView
+        android:id="@+id/icon_beauty"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_beauty"
+        app:layout_constraintEnd_toStartOf="@+id/icon_shoes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_apparel"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Beauty"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_beauty"
+        app:layout_constraintStart_toStartOf="@+id/icon_beauty"
+        app:layout_constraintTop_toBottomOf="@+id/icon_beauty" />
+
+    <ImageView
+        android:id="@+id/icon_shoes"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_shoes"
+        app:layout_constraintEnd_toStartOf="@+id/icon_see_all"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_beauty"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Shoes"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_shoes"
+        app:layout_constraintStart_toStartOf="@+id/icon_shoes"
+        app:layout_constraintTop_toBottomOf="@+id/icon_shoes" />
+
+    <ImageView
+        android:id="@+id/icon_see_all"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/ic_see_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icon_shoes"
+        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="See All"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/icon_see_all"
+        app:layout_constraintStart_toStartOf="@+id/icon_see_all"
+        app:layout_constraintTop_toBottomOf="@+id/icon_see_all" />
+
+    <TextView
+        android:id="@+id/text_latest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="Latest"
+        android:textAlignment="textStart"
+        android:textColor="@color/primary_grey"
+        android:textSize="30sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_categories" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_latest"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingStart="4dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/text_latest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_items"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_latest"
+        app:spanCount="3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
